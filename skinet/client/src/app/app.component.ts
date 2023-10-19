@@ -8,14 +8,14 @@ import { Product } from './models/product';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'Skinet';
-  /*products: Product[] = [];
+  products: Product[] = [];
 
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
-    this.http.get<Pagination<Product[]>>('https://localhost:5001/api/products').subscribe({
+    this.http.get<Pagination<Product[]>>('https://localhost:5001/api/products?pageSize=50').subscribe({
       next: response => this.products = response.data, // what to do next
       error: error => console.log(error), // what to do if there is an error
       complete: () => {
@@ -23,5 +23,5 @@ export class AppComponent {
         console.log('extra statment');
       }
     })
-  }*/
+  }
 }
